@@ -1,0 +1,42 @@
+{
+  "name": "@milandadhaniya/tiny-logger-js",
+  "version": "1.0.1",
+  "description": "A tiny logger for both Node.js and browser environments, with configurable log levels and console output methods.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --watch --format esm,cjs --dts"
+  },
+  "keywords": [
+    "logger",
+    "tiny-logger",
+    "console",
+    "debug",
+    "typescript",
+    "browser",
+    "nodejs",
+    "log-levels"
+  ],
+  "author": "Milan Dadhaniya <milan.dadhaniya@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milandadhaniya1/tiny-logger-js"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
