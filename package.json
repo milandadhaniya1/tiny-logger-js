@@ -1,6 +1,6 @@
 {
   "name": "@milandadhaniya/tiny-logger-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny logger for both Node.js and browser environments, with configurable log levels and console output methods.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
