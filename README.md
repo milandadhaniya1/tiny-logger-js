@@ -10,13 +10,12 @@ npm install @milandadhaniya/tiny-logger-js
 ## Usage
 
 ```javascript
-import logger, { TinyLogger, LoggerConfig, LogParams } from '@milandadhaniya/tiny-logger-js';
+import logger, { TinyLogger, LoggerConfig } from '@milandadhaniya/tiny-logger-js';
 
 // Using default logger instance
 logger.log({ title: 'Init', msg: 'Application started' });
 logger.info({ msg: 'Fetching data...' });
 logger.warn({ title: 'Warning', msg: 'Deprecated method used' });
-logger.error({ msg: 'An error occurred', force: true });
 logger.debug({ title: 'Debug', msg: { userId: 123, status: 'active' } });
 logger.trace('Trace message');
 logger.table({ msg: [{ name: 'Alice' }, { name: 'Bob' }] });
@@ -35,6 +34,8 @@ const config: LoggerConfig = { allowed: new Set(['log', 'error']) };
 const customLogger = new TinyLogger(config);
 customLogger.log({ msg: 'This will print' });
 customLogger.info({ msg: 'This will NOT print' });
+// Force override allowed log types to print
+customLogger.info({ msg: 'This will print - info', force: true });
 ```
 ## API
 | Method     | Description                       |
